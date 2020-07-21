@@ -1,0 +1,298 @@
+[01:46, 7/22/2020] Solo: Back Slash¶
+print("Buenos Dias,
+    Mucho Gusto")
+  File "<ipython-input-1-949aed733084>", line 1
+    print("Buenos Dias,
+                        ^
+SyntaxError: EOL while scanning string literal
+I correct it by using .
+
+print("Buenos Dias, \
+Mucho Gusto")
+Buenos Dias, Mucho Gusto
+-----------------------------------
+Triple Quotes
+print("""(”)….(”)
+( ‘ o ‘ )
+(”)–(”)
+(””’)-(””’)""")
+output-
+(”)….(”)
+( ‘ o ‘ )
+(”)–(”)
+(””’)-(””’)
+A doc string example-
+
+"""(”)….(”)
+( ‘ o ‘ )
+(”)–(”)
+(””’)-(””’)"""
+output-
+'(”)….(”)\n( ‘ o ‘ )\n(”)–(”)\n(””’)-(””’)'
+--------------------------------------------
+Strings inside quotes
+
+print("Buenos Dias")
+Buenos Dias
+
+but if there is an apostrophe in the print statement-
+
+print('The party's over')
+  File "<ipython-input-13-bb38e522e0df>", line 1
+    print('The party's over')
+                    ^
+SyntaxError: invalid syntax
+This type of error can be removed using -- 1. use double quotes:
+
+print("The party's over")
+The party's over
+2. use backslash:
+
+print('The party\'s over')
+The party's over
+--------------------------------------------------
+Escape sequence of strings
+if we want to have a space between two strings, we can use \t.
+
+print("random\trandom\trandom")
+random	random	random
+if we want the output in new lines, we can use \n.
+
+print("random\nrandom\nrandom")
+random
+random
+random
+--------------------------------------------------
+Formatted output
+a="striker"
+b=93.369
+c=22
+print("the name is",a,"marks are",b,"and age is",c)
+the name is striker marks are 93.369 and age is 22
+
+It can also be implemented as
+
+print("the name is %s marks are %f and the age is %d"%(a,b,c))
+the name is striker marks are 93.369000 and the age is 22
+
+if we want to add spaces, then we can use %10.
+
+print("the name is %10s marks are %10f and the age is %10d"%(a,b,c))
+the name is     striker marks are  93.369000 and the age is         22
+
+for more accuracy in marks use .2 or .3 or any places.
+
+print("the name is %s marks are %.3f and the age is %d"%(a,b,c))
+the name is striker marks are 93.369 and the age is 22
+
+We can also compile using the f string-
+
+print(f"the name is {a} marks are {b} and the age is {c}")
+the name is striker marks are 93.369 and the age is 22
+-----------------------------------------------------------------------
+Python variables-
+We can use anything as a variable but not predifined keywords. For example
+
+if =5
+  File "<ipython-input-27-3ee8fa737599>", line 1
+    if =5
+       ^
+SyntaxError: invalid syntax
+but it can accept the following statement,
+
+if1=5
+We cannot use a number at the starting of the variable.
+
+10x=1
+  File "<ipython-input-29-1333e7d4455c>", line 1
+    10x=1
+      ^
+SyntaxError: invalid syntax
+but, the following format is a valid statement in python
+
+x10=1
+
+Python also considers underscore( _ ) as a variable
+_=2
+---------------------------------------------------------------
+Python assignment statement
+a=b=10
+a
+10
+b
+10
+
+x=10
+id(x)
+140712514266096
+if another variable called y is also assigned to 10, then the address for both the variables x and y is same.
+
+y=10
+id(y)
+140712514266096
+
+we can delete the binding by using the del keyword
+
+del y
+y
+------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-41-141b3ea3f03f> in <module>
+----> 1 y
+
+NameError: name 'y' is not defined
+but it will not delete the address location of y, because x still holds the value
+
+x
+20
+---------------------------------------------------------------
+Arithmetic operators
+Addtion, Substraction, Multiplication and Division
+
+3+6
+9
+9-6
+3
+3*4
+12
+10/3
+3.33
+
+we can also perform exponention, modulus and floor division in python
+
+2**3
+8
+5%2
+1
+10//3
+3
+-------------------------------------------------------------
+Comparison operators
+if both the values for the variables is true, then it shows true
+
+x=10
+y=20
+x==y
+False
+z=10
+x==z
+True
+
+greater, lesser, greaterthan, lesserthan operators
+
+x>z
+False
+x<z
+False
+x>=z
+True
+x<=z
+True
+
+not equal to operator
+
+x!=y
+True
+x!=z
+False
+----------------------------------------------------
+Bitwise operators-
+operators like |, & and ^
+
+a=240
+b=1
+a|b
+241
+a&b
+0
+a^b
+241
+For getting binary values
+
+bin(a)
+'0b11110000'
+bin(b)
+'0b1'
+----------------------------------------------------
+Logical Operators-
+a=1
+b=20
+a>20
+False
+Using truth tables, we can also see
+
+a>20 or 10>9
+True
+the above example is for 'or' and the below one is for 'and'
+
+a>20 and 10>9
+False
+
+Sometimes the following can also happen-
+
+10>9 & 20>m
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-78-186958e0906b> in <module>
+----> 1 10>9 & 20>m
+
+NameError: name 'm' is not defined
+for and operator, if one condition is false, then it directly prints false
+
+10<9 & 20>m
+False
+--------------------------------------------------------------------------
+not operator
+
+10<7
+False
+not 10<7
+True
+---------------------------------------------------------------------------
+Membership operators-
+
+In and not in operators
+
+str1 ="Buenos Dias"
+"x" in str1
+False
+"x" not in str1
+True
+-----------------------------------------------------------------------------
+Identity operator-
+is and is not operators
+
+a=50
+b=50
+a==b
+True
+a is b
+True
+It prints out true because the address location is the same
+
+a is not b
+False
+
+for all the integers between -5 to 256, this condition prints true
+
+a=255
+b=255
+a is b
+True
+a=257
+b=257
+a is b
+False
+the float values also returns false
+
+a=1.5
+b=1.5
+a==b
+True
+a is b
+False
+-----------------------------
+Operator precedence
+10+10/2-4
+Output-
+11.0
