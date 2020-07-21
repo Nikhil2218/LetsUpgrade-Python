@@ -1,4 +1,5 @@
-[01:46, 7/22/2020] Solo: Back Slash¶
+Back Slash¶
+
 print("Buenos Dias,
     Mucho Gusto")
   File "<ipython-input-1-949aed733084>", line 1
@@ -16,7 +17,7 @@ print("""(”)….(”)
 ( ‘ o ‘ )
 (”)–(”)
 (””’)-(””’)""")
-output-
+Output-
 (”)….(”)
 ( ‘ o ‘ )
 (”)–(”)
