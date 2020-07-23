@@ -1,0 +1,56 @@
+1. Find all the occurences and print the index values in the following string : "what we think we become, we are python programmer"
+
+string = input("Enter the string value: ")
+substring = input("Enter the substring: ")
+index = -1
+while True:
+    index = string.find(substring, index+1)
+    if index == -1:
+        break
+    print(index)
+    
+Output- 
+Enter the string value: what we think we become, we are python programmer
+Enter the substring: we
+5
+14
+25
+------------------------------------------------------------------------------------------------
+islower() with different kinds of strings
+
+str1 = "buenos dias"
+print(str1.islower())
+True
+#because all are in lower case letters#
+
+str2 = "Buenos Dias"
+print(str2.islower())
+False
+#because B,D are in upper case letters#
+
+str3 = "buenos dias123"
+print(str3.islower())
+True
+#though it contains alpha numericals, all are in lower case, hence true#
+
+str4 = "99999"
+print(str4.islower())
+False
+#because all are numbers, not characters#
+
+isupper() with different kinds of strings
+
+str1 = "BUENOS DIAS"
+print(str1.isupper())
+True
+#because all are in upper case letters#
+
+str2 = "Buenos Dias"
+print(str2.isupper())
+False
+#because few characters are in lower case#
+
+str3 = "BUENOS DIAS 123"
+print(str3.isupper())
+True
+#though it contains alpha numericals, it contains all upper case letters#
