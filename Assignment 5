@@ -1,0 +1,19 @@
+1. [0,1,2,10,4,1,0,56,2,0,1,3,0,56,0,4] sort this list but all zeroes should be in the right side
+list1 = [0,1,2,10,4,1,0,56,2,0,1,3,0,56,0,4]
+list1.sort()
+i=list1.count(0);
+print(list1[i:]+list1[:i])
+
+Output-
+[1, 1, 1, 2, 2, 3, 4, 4, 10, 56, 56, 0, 0, 0, 0, 0]
+
+2. Merge the two sorted lists and print them using only one loop 
+list1=[10,20,40,60,70,80]
+list2=[5,15,25,35,45,60]
+list3=list1+list2
+for each in range (5,81):
+if each in list3:
+print (each)
+
+Output -
+[5, 10, 15, 20, 25, 35, 40, 45, 60, 70, 80]
