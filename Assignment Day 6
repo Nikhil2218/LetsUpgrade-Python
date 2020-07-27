@@ -1,0 +1,9 @@
+1. Convert the lists into a dictionary in one line code using list comprehension (without zip method)
+
+list1=[1,2,3,4,5,7,8]
+list2=["a","b","c","d","e"]
+dict1 ={list1[i]: list2[i] for i in range(len(list2))}
+print("The Dictionary is: " + str(dict1))
+
+Output -
+The Dictionary is: {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e'}
