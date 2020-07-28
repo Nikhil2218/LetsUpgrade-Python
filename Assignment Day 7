@@ -1,0 +1,30 @@
+1. dict1 = {21:"ftp",22:"ssh",23:"telnet",80:"http"}
+Create a new dictionary where the keys and values from the previous dictionary are interchanged
+
+dict1 = {21:"ftp",22:"ssh",23:"telnet",80:"http"}
+dict2 ={value:key for key,value in dict1.items()}
+print(dict2)
+
+Output-
+{'ftp': 21, 'ssh': 22, 'telnet': 23, 'http': 80}
+-------------------------------------------------------------------------------------
+2. list1 = [(1,2),(3,4),(5,6),(4,5)]
+Create a new list which contains the sum of tuples in the previous list
+
+list1 = [(1,2),(3,4),(5,6),(4,5)]
+list2 = [sum(i) for i in lst]
+print(list2)
+
+Output-
+[3, 7, 11, 9]
+-------------------------------------------------------------------------------------
+3. list1=[(1,2,3),[1,2],['a','hit','less']]
+Make the elements in the inner list and tuples to the outer list
+
+list1=[(1,2,3),[1,2],['a','hit','less']]
+list2=[]
+list2=[i for each in list1 for i in each]
+print (list2)
+
+Output-
+[1, 2, 3, 1, 2, 'a', 'hit', 'less']
